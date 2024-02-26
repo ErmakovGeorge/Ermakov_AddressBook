@@ -1,74 +1,110 @@
 package org.example;
 
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class AddressEntryTest {
+    private AddressEntry entry;
 
-    @org.junit.jupiter.api.Test
+    @BeforeEach
+    void setUp() {
+        // Initialize with some default values
+        entry = new AddressEntry("John", "Doe", "123 Main St", "Anytown", "Anystate", "12345", "john.doe@example.com", "555-1234");
+    }
+
+    @Test
     void getFirstName() {
+        assertEquals("John", entry.getFirstName());
     }
 
-    @org.junit.jupiter.api.Test
+    @Test
     void setFirstName() {
+        entry.setFirstName("Jane");
+        assertEquals("Jane", entry.getFirstName());
     }
 
-    @org.junit.jupiter.api.Test
+    @Test
     void getLastName() {
+        assertEquals("Doe", entry.getLastName());
     }
 
-    @org.junit.jupiter.api.Test
+    @Test
     void setLastName() {
+        entry.setLastName("Smith");
+        assertEquals("Smith", entry.getLastName());
     }
 
-    @org.junit.jupiter.api.Test
+    @Test
     void getStreet() {
+        assertEquals("123 Main St", entry.getStreet());
     }
 
-    @org.junit.jupiter.api.Test
+    @Test
     void setStreet() {
+        entry.setStreet("456 Elm St");
+        assertEquals("456 Elm St", entry.getStreet());
     }
 
-    @org.junit.jupiter.api.Test
+    @Test
     void getCity() {
+        assertEquals("Anytown", entry.getCity());
     }
 
-    @org.junit.jupiter.api.Test
+    @Test
     void setCity() {
+        entry.setCity("Othertown");
+        assertEquals("Othertown", entry.getCity());
     }
 
-    @org.junit.jupiter.api.Test
+    @Test
     void getState() {
+        assertEquals("Anystate", entry.getState());
     }
 
-    @org.junit.jupiter.api.Test
+    @Test
     void setState() {
+        entry.setState("Otherstate");
+        assertEquals("Otherstate", entry.getState());
     }
 
-    @org.junit.jupiter.api.Test
+    @Test
     void getZip() {
+        assertEquals("12345", entry.getZip());
     }
 
-    @org.junit.jupiter.api.Test
+    @Test
     void setZip() {
+        entry.setZip("54321");
+        assertEquals("54321", entry.getZip());
     }
 
-    @org.junit.jupiter.api.Test
+    @Test
     void getEmail() {
+        assertEquals("john.doe@example.com", entry.getEmail());
     }
 
-    @org.junit.jupiter.api.Test
+    @Test
     void setEmail() {
+        entry.setEmail("jane.doe@example.com");
+        assertEquals("jane.doe@example.com", entry.getEmail());
     }
 
-    @org.junit.jupiter.api.Test
+    @Test
     void getPhone() {
+        assertEquals("555-1234", entry.getPhone());
     }
 
-    @org.junit.jupiter.api.Test
+    @Test
     void setPhone() {
+        entry.setPhone("555-5678");
+        assertEquals("555-5678", entry.getPhone());
     }
 
-    @org.junit.jupiter.api.Test
+    @Test
     void testToString() {
+        // Assuming toString is overridden to concatenate basic info
+        String expected = "John Doe, 123 Main St, Anytown, Anystate, 12345, john.doe@example.com, 555-1234";
+        assertEquals(expected, entry.toString());
     }
 }
