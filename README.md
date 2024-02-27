@@ -51,6 +51,7 @@ The choice of data structures and algorithms directly supports the main operatio
 
 
 	Section B: JavaDoc URL: 
+ https://ermakovgeorge.github.io/Ermakov_AddressBook/org/example/package-summary.html
 
 	Section C: UML/Design:
 
