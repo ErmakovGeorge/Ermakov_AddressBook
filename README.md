@@ -85,7 +85,8 @@ Loading from file
 	Section E: Commit History:
 
 
-<img width="468" alt="image" src="https://github.com/ErmakovGeorge/Ermakov_AddressBook/assets/98370485/370aed90-e2b5-44aa-87e6-aba49eccb63c">
+<img width="1650" alt="image" src="https://github.com/ErmakovGeorge/Ermakov_AddressBook/assets/98370485/c82ee88a-5ad4-41af-a19d-ad673cfb8240">
+
 
 
 
